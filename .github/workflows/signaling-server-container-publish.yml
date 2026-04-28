@@ -47,7 +47,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v6
         with:
-          images: ${{ env.REGISTRY }}/${{ steps.set_variables.outputs.actor }}/${{ steps.set_variables.outputs.repository }}
+          images: ${{ env.REGISTRY }}/${{ steps.set_variables.outputs.actor }}/localsend-signaling-server
           tags: |
             type=ref,event=branch
             type=semver,pattern={{version}}
